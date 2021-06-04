@@ -1,0 +1,29 @@
+@mixin transform($deg){
+   -webkit-transform: $deg;  
+   -moz-transform: $deg;  
+   -ms-transform: $deg;  
+   -o-transform: $deg;  
+   transform: $deg;  
+}
+@mixin gradiant($direction,$first-color,$second-color){
+   background-image: linear-gradient($direction,$first-color,$second-color);
+}
+@mixin btn($direction,$first-color,$second-color){
+   @include gradiant($direction,$first-color,$second-color);
+   color: $header-btn-color-font;
+   text-align: center;
+   border: none;
+   &:focus
+   {
+       outline: none;
+   }
+}
+@mixin background-circle{
+   content: '';
+   width: 25%;
+   // height: 18.75rem;
+   border-radius: 50%;
+   background-color: $header-circle-color;
+   position: absolute;
+} 
+   
